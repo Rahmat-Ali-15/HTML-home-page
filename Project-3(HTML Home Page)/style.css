@@ -1,0 +1,522 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('https://t4.ftcdn.net/jpg/04/61/47/03/360_F_461470323_6TMQSkCCs9XQoTtyer8VCsFypxwRiDGU.jpg');
+}
+.container{
+    height: fit-content;
+    margin: 50px 100px 0 100px;
+    border: 2px solid #ede5e5;
+    border-radius: 40px;
+}
+/* Header part srart from here.*/
+.header_containt{
+    background-color: rgb(88, 99, 171);
+    padding: 30px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+/* nav part start from here*/
+.nav_logo{
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    animation: logo 3s linear infinite;
+    cursor: pointer;
+}
+@keyframes logo{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav_button{
+    width: 115px;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-image: radial-gradient(rgb(40, 96, 96),aquamarine);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    /* transition: all 0.5s linear; */ /* this property is not working????*/
+    animation: scale 2s linear infinite alternate;
+}
+@keyframes scale{
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+.nav_button:hover{
+    transform: translateY(-10px);/* this property is not working????*/
+    box-shadow: 2px 2px 0cap 0px aquamarine;
+}
+.nav_button:active{
+    transform: translate(-2px);
+}
+
+/* nav part end here*/
+
+
+/* Social media part start from here*/
+
+.social_media{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 15px;
+    margin-left: 570px;
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+.social_media a::before{
+    content: "";
+    position: absolute;
+    left: 0%; /* Because of this border start from left side*/
+    bottom: -5px; /*Because of this border present in the bottom*/
+    background-color: #fff;
+    height: 2px; /*Height of the border*/
+/* transition property*/
+    width: 0%;
+    transition: width 0.8s linear;
+}
+.social_media a:hover::before{
+    width: 100%;
+}
+
+/*Social media part end here*/
+
+
+/*header rest part(image,name,heading,lower button) start from here.*/
+
+.profile_image{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: 60px;
+    border: none;
+    border-radius: 50%;
+    transition: all 1s linear;
+    cursor: pointer;
+}
+.profile_image:hover{
+    transform: scale(1.2);
+    content: url('3d_eagle.jpg');
+    /* z-index: 1; */
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image_name{
+    position: relative;
+    left: 40px;
+    bottom: 20px;
+    padding: 15px 30px;
+    color: #fff;
+    background-image: radial-gradient(red,blue);
+    transform: rotate(-15deg);
+    border: none;
+    border-radius: 20px;
+}
+.image_name::after{
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: 98.5%;
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent rgb(57, 57, 216) transparent transparent;
+}
+.main_heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_heading h2{
+    width: 320px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+    color: #fff;
+}
+.header_lower_button{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.header_lower_button button{
+    width: 150px;
+    padding: 20px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background-image: radial-gradient(rgb(253, 4, 4),rgb(170, 63, 16));
+    transition: 0.5s linear;
+}
+.header_lower_button button:hover{
+    background-image: radial-gradient(rgb(40, 96, 96),aquamarine);
+    transform: translateY(-10px);
+}
+
+/*header rest part(image,name,heading,lower button) end here.*/
+
+
+/* Lower part of main start from here */
+
+/* upper part of lower main start from here*/
+.upper_div{
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    /* background-color: #fff; */
+}
+
+.upper_div img{
+    height: 100px;
+    width: 100px;
+}
+
+
+/* tooltip start from here */
+div>.html_logo{
+    position: relative;
+}
+div>.html_logo+.html_tooltip{
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+    font-size: 20px;
+    width: 100px;
+    background-image: radial-gradient(rgb(181, 181, 36),red);
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    bottom: 18%;
+}
+div>.html_logo:hover+.html_tooltip{
+    visibility: visible;
+}
+div>.css_logo{
+    position: relative;
+}
+div>.css_logo+.css_tooltip{
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+    font-size: 20px;
+    width: 100px;
+    background-image: radial-gradient(rgb(39, 19, 141),rgba(112, 108, 234, 0.8));
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    bottom: 17%;
+}
+div>.css_logo:hover+.css_tooltip{
+    visibility: visible;
+}
+div>.javascript_logo{
+    position: relative;
+}
+div>.javascript_logo+.javascript_tooltip{
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+    font-size: 22px;
+    width: 140px;
+    background-image: radial-gradient(rgba(255, 247, 5, 0.811),rgba(226, 241, 13, 0.811));
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px;
+    bottom: 16%;
+}
+div>.javascript_logo:hover+.javascript_tooltip{
+    visibility: visible;
+}
+div>.mongodb_logo{
+    position: relative;
+}
+div>.mongodb_logo+.mongodb_tooltip{
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+    font-size: 20px;
+    width: 125px;
+    background-image: radial-gradient(rgb(39, 197, 47),rgba(39, 132, 46, 0.981));
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px;
+    bottom: 16%;
+}
+div>.mongodb_logo:hover+.mongodb_tooltip{
+    visibility: visible;
+}
+div>.react_logo{
+    position: relative;
+}
+div>.react_logo+.react_tooltip{
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+    font-size: 20px;
+    width: 100px;
+    background-image: radial-gradient(#61dbfb,#61dbfb);
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px;
+    bottom: 16%;
+}
+div>.react_logo:hover+.react_tooltip{
+    visibility: visible;
+}
+div>.nodedotjs_logo{
+    position: relative;
+}
+div>.nodedotjs_logo+.nodejs_tooltip{
+    position: absolute;
+    visibility: hidden;
+    color: #fff;
+    font-size: 20px;
+    width: 120px;
+    background-image: radial-gradient(#35c116d0,#1ac011be);
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px;
+    bottom: 16%;
+}
+div>.nodedotjs_logo:hover+.nodejs_tooltip{
+    visibility: visible;
+}
+/* tooltip end here */
+
+
+/*  toltip arrow start from here */
+div>.html_logo:hover+.html_tooltip::after{
+    content: "";
+    position: absolute;
+    left: 35%;
+    top: 100%;
+    bottom: 20px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+}
+div>.css_logo:hover+.css_tooltip::after{
+    content: "";
+    position: absolute;
+    left: 35%;
+    top: 100%;
+    bottom: 20px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: rgb(83, 78, 220) transparent transparent transparent;
+}
+div>.javascript_logo:hover+.javascript_tooltip::after{
+    content: "";
+    position: absolute;
+    left: 40%;
+    top: 100%;
+    bottom: 20px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: rgba(255, 255, 0, 0.766) transparent transparent transparent;
+}
+div>.mongodb_logo:hover+.mongodb_tooltip::after{
+    content: "";
+    position: absolute;
+    left: 32%;
+    top: 100%;
+    bottom: 20px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: rgba(38, 197, 46, 0.738) transparent transparent transparent;
+}
+div>.react_logo:hover+.react_tooltip::after{
+    content: "";
+    position: absolute;
+    left: 35%;
+    top: 100%;
+    bottom: 20px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #61dbfb transparent transparent transparent;
+}
+div>.nodedotjs_logo:hover+.nodejs_tooltip::after{
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: 100%;
+    bottom: 20px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #1ac011be transparent transparent transparent;
+}
+/*  tooltip arrow end here */
+
+
+
+
+.upper_div .css_logo{
+    animation: mongodb 2s linear infinite 2s alternate;
+    cursor: pointer;
+ }
+ @keyframes mongodb{
+     from{
+         transform: scale(0.8);
+     }
+     to{
+         transform: scale(1.3);
+     }
+ }
+.upper_div .javascript_logo,.react_logo{
+    height: 110px;
+    width: 140px;
+    border: none;
+    animation: javascript 3s linear infinite;
+    cursor: pointer;
+}
+@keyframes javascript{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.upper_div .html_logo,.nodedotjs_logo{
+    height: 130px;
+    width: 120px;
+    border: none;
+    animation: mongodb 2s linear infinite alternate;
+    cursor: pointer;
+ }
+ @keyframes mongodb{
+     from{
+         transform: scale(0.8);
+     }
+     to{
+         transform: scale(1.2);
+     }
+ }
+
+.upper_div .mongodb_logo{
+    height: 130px;
+    width: 120px;
+    border: none;
+    animation: mongodb 2s linear infinite alternate;
+    cursor: pointer;
+}
+@keyframes mongodb{
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+/* upper part of lower main end here*/
+
+
+
+.lower_div{
+    height: fit-content;
+    background-color: rgb(88, 99, 171);
+    border-radius: 40px;
+}
+.lower_first_child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lower_first_child_heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 550px;
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+}
+hr{
+    margin: auto;
+    margin-top: 20px;
+    width: 800px;
+    height: 3px;
+    background-color: rgb(88, 98, 164);
+    border: none;
+}
+.hr_button{
+    width: 120px;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    left: 45%;
+    bottom: 30px;
+    color: #fff;
+    background-image: radial-gradient(red, yellow);
+    cursor: pointer;
+    transition: all 1.5s linear;
+}
+.hr_button:hover{
+    transform: rotate(-40deg) scale(1.2);
+}
+.lower_second_child{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lower_second_child_div img{
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 1s linear;
+}
+.lower_second_child_div img:hover{
+    transform: scale(1.3);
+}
+p{
+    width: 200px;
+    margin-top: 15px;
+    text-align: center;
+    color: #fff;
+}
+h3{
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+/* Lower part of main end here */
