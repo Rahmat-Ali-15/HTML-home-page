@@ -5,19 +5,205 @@
 }
 body{
     background-image: url('https://t4.ftcdn.net/jpg/04/61/47/03/360_F_461470323_6TMQSkCCs9XQoTtyer8VCsFypxwRiDGU.jpg');
+    background-size: contain;
 }
+
 .container{
     height: fit-content;
-    margin: 50px 100px 0 100px;
-    border: 2px solid #ede5e5;
-    border-radius: 40px;
+    /* margin: 50px 100px 0 100px; */
+    /* border: 2px solid #ede5e5; */
+    /* border-radius: 40px; */
 }
+
+/* media query start from here */
+
+
+@media (min-width: 481px) and (max-width: 768px){
+    .container{
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .header_containt{
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+    }
+    .navbar{
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+    }   
+    .nav_logo{
+        height: 65px !important;
+    }
+    .icon_button_part{
+        display: flex !important;
+        gap: 0px !important;
+        margin: 0 !important;
+    }
+    .nav_button{
+        padding: 10px !important;
+        width: 70px !important;
+        font-size: 12px !important;
+    }
+    .social_media a{
+       display: none;
+    }
+    .hamburger,span{
+        display: flex !important;
+    }
+    .img{
+        margin-top: 20px;
+    }
+    .upper_div{
+        width: 100% !important;
+        height: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px !important;
+        padding: 30px 50px!important;
+    }
+    .upper_div img{
+        height: 100px !important;
+        width: 100px !important;
+        display: flex !important;
+        margin: auto;
+    }
+    .upper_div .mongodb_logo{
+        height: 100px !important;
+        width: 120px !important;
+    }
+    .upper_div .javascript_logo{
+        height: 100px !important;
+        width: 120px !important;
+    }
+    hr{
+        width: 100% !important;
+    }
+    .hr_button{
+        margin-left: -20px !important;
+    }
+    .lower_second_child{
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .lower_second_child_div{
+        padding: 20px;
+        margin: auto !important;
+    }
+    .lower_second_child_div img{
+        margin: 0 auto !important;
+        display: flex;
+        border: 2px solid green;
+    }
+}
+
+
+@media (max-width: 480px){
+    .container{
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .header_containt{
+        border-top-right-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+    }
+    .navbar{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .nav_logo{
+        height: 59px !important;
+    }
+    .icon_button_part{
+        width: 50% !important;
+        display: flex !important;
+    }
+    .nav_button{
+        display: none !important;
+    }
+    .social_media a{
+       display: none;
+    }
+    .hamburger,span{
+        height: 50px !important;
+        display: flex !important;
+    }
+
+    .image_name{
+        display: none;
+    }
+    .upper_div{
+        width: 60% !important;
+        height: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 40px ;
+        padding: 30px 10px !important;
+        margin: auto;
+    }
+    .upper_div img{
+        height: 70px !important;
+        width: 70px !important;
+        display: block;
+        margin: auto;
+    }
+    .upper_div .mongodb_logo{
+        height: 90px !important;
+        width: 80px !important;
+    }
+    .lower_first_child_heading{
+        height: fit-content !important;
+        padding: 20px !important;
+        text-align: center;
+    }
+    hr{
+        margin-top: 50px !important;
+        width: 100% !important;
+    }
+    .hr_button{
+        margin-left: -45px !important;
+    }
+    .lower_second_child{
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .lower_second_child_div{
+        width: 100% !important;
+        padding: 20px 30px !important;
+        margin: auto !important;
+    }
+    .lower_second_child_div img{
+        margin: 0 auto !important;
+        display: flex;
+    }
+    .lower_second_child_div h3{
+        margin-top: 30px !important;
+    }
+    .lower_second_child_div p{
+        width: fit-content !important;
+    }
+}
+@media (min-width: 1440px){
+    .lower_first_child_heading{
+        width: 100% !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+
+/* media query end here */
+
+
 /* Header part srart from here.*/
 .header_containt{
     background-color: rgb(88, 99, 171);
     padding: 30px;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
     border-bottom-left-radius: 80px;
     border-bottom-right-radius: 80px;
 }
@@ -40,8 +226,21 @@ body{
 }
 .navbar{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon_button_part{
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
     gap: 30px;
+}
+.nav_button_container{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .nav_button{
     width: 115px;
@@ -52,7 +251,6 @@ body{
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    /* transition: all 0.5s linear; */ /* this property is not working????*/
     animation: scale 2s linear infinite alternate;
 }
 @keyframes scale{
@@ -64,24 +262,43 @@ body{
     }
 }
 .nav_button:hover{
-    transform: translateY(-10px);/* this property is not working????*/
     box-shadow: 2px 2px 0cap 0px aquamarine;
 }
 .nav_button:active{
     transform: translate(-2px);
 }
 
+
 /* nav part end here*/
+
 
 
 /* Social media part start from here*/
 
+.hamburger{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    height: 50px;
+    padding: 10px;
+    background-image: linear-gradient(rgb(0, 149, 255),rgb(0, 21, 128));
+    border-radius: 10px;
+    width: 50px;
+    border: none;
+}
+.hamburger>span{
+    height: 4px;
+    width: 30px;
+    border-radius: 20px;
+    background-image: linear-gradient(rgb(91, 5, 252),rgb(3, 225, 250));
+}
 .social_media{
     display: flex;
-    justify-content: right;
+    justify-content: space-evenly;
     align-items: center;
     gap: 15px;
-    margin-left: 570px;
 }
 a{
     font-size: 20px;
@@ -108,12 +325,16 @@ a{
 
 
 /*header rest part(image,name,heading,lower button) start from here.*/
-
+.img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 .profile_image{
     height: 150px;
     width: 150px;
-    position: relative;
-    left: 60px;
     border: none;
     border-radius: 50%;
     transition: all 1s linear;
@@ -122,17 +343,12 @@ a{
 .profile_image:hover{
     transform: scale(1.2);
     content: url('3d_eagle.jpg');
-    /* z-index: 1; */
 }
-.img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .image_name{
-    position: relative;
-    left: 40px;
-    bottom: 20px;
+    position: absolute;
+    left: 55%;
+    bottom: 50%;
     padding: 15px 30px;
     color: #fff;
     background-image: radial-gradient(red,blue);
@@ -196,7 +412,6 @@ a{
     justify-content: center;
     align-items: center;
     gap: 60px;
-    /* background-color: #fff; */
 }
 
 .upper_div img{
@@ -215,11 +430,11 @@ div>.html_logo+.html_tooltip{
     color: #fff;
     font-size: 20px;
     width: 100px;
-    background-image: radial-gradient(rgb(181, 181, 36),red);
+    background-image: radial-gradient(rgb(181, 181, 36),rgb(255, 0, 0));
     text-align: center;
     border-radius: 20px;
     padding: 20px;
-    bottom: 18%;
+    bottom: 28%;
 }
 div>.html_logo:hover+.html_tooltip{
     visibility: visible;
@@ -237,7 +452,7 @@ div>.css_logo+.css_tooltip{
     text-align: center;
     border-radius: 20px;
     padding: 20px;
-    bottom: 17%;
+    bottom: 25%;
 }
 div>.css_logo:hover+.css_tooltip{
     visibility: visible;
@@ -255,7 +470,7 @@ div>.javascript_logo+.javascript_tooltip{
     text-align: center;
     border-radius: 30px;
     padding: 20px;
-    bottom: 16%;
+    bottom: 23%;
 }
 div>.javascript_logo:hover+.javascript_tooltip{
     visibility: visible;
@@ -273,7 +488,7 @@ div>.mongodb_logo+.mongodb_tooltip{
     text-align: center;
     border-radius: 30px;
     padding: 20px;
-    bottom: 16%;
+    bottom: 23%;
 }
 div>.mongodb_logo:hover+.mongodb_tooltip{
     visibility: visible;
@@ -291,7 +506,7 @@ div>.react_logo+.react_tooltip{
     text-align: center;
     border-radius: 30px;
     padding: 20px;
-    bottom: 16%;
+    bottom: 23%;
 }
 div>.react_logo:hover+.react_tooltip{
     visibility: visible;
@@ -309,7 +524,7 @@ div>.nodedotjs_logo+.nodejs_tooltip{
     text-align: center;
     border-radius: 30px;
     padding: 20px;
-    bottom: 16%;
+    bottom: 25%;
 }
 div>.nodedotjs_logo:hover+.nodejs_tooltip{
     visibility: visible;
@@ -326,7 +541,7 @@ div>.html_logo:hover+.html_tooltip::after{
     bottom: 20px;
     border-width: 15px;
     border-style: solid;
-    border-color: red transparent transparent transparent;
+    border-color: rgb(255, 0, 0) transparent transparent transparent;
 }
 div>.css_logo:hover+.css_tooltip::after{
     content: "";
@@ -336,7 +551,7 @@ div>.css_logo:hover+.css_tooltip::after{
     bottom: 20px;
     border-width: 15px;
     border-style: solid;
-    border-color: rgb(83, 78, 220) transparent transparent transparent;
+    border-color: rgba(84, 84, 182, 0.682) transparent transparent transparent;
 }
 div>.javascript_logo:hover+.javascript_tooltip::after{
     content: "";
@@ -449,7 +664,8 @@ div>.nodedotjs_logo:hover+.nodejs_tooltip::after{
 .lower_div{
     height: fit-content;
     background-color: rgb(88, 99, 171);
-    border-radius: 40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
 }
 .lower_first_child{
     display: flex;
@@ -493,14 +709,22 @@ hr{
 }
 .lower_second_child{
     margin-top: 50px;
+    pad: 30px;
     display: flex;
     justify-content: space-evenly;
+   
 }
-
+.lower_second_child_div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    
+}
 .lower_second_child_div img{
     height: 100px;
     width: 100px;
-    margin-left: 50px;
+    margin-bottom: 30px;
     border-radius: 50px;
     cursor: pointer;
     transition: all 1s linear;
@@ -516,7 +740,6 @@ p{
 }
 h3{
     text-align: center;
-    margin-top: 20px;
     color: #fff;
 }
 /* Lower part of main end here */
