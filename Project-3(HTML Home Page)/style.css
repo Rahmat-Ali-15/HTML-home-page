@@ -10,9 +10,6 @@ body{
 
 .container{
     height: fit-content;
-    /* margin: 50px 100px 0 100px; */
-    /* border: 2px solid #ede5e5; */
-    /* border-radius: 40px; */
 }
 
 /* media query start from here */
@@ -98,10 +95,33 @@ body{
         display: flex;
         border: 2px solid green;
     }
+
+    div>.html_logo:hover+.html_tooltip{
+        visibility: hidden !important;
+    }
+    div>.css_logo:hover+.css_tooltip{
+        visibility: hidden !important;
+    }
+    div>.javascript_logo:hover+.javascript_tooltip{
+        visibility: hidden !important;
+    }
+    div>.mongodb_logo:hover+.mongodb_tooltip{
+        visibility: hidden !important;
+    }
+    div>.react_logo:hover+.react_tooltip{
+        visibility: hidden !important;
+    }
+    div>.nodedotjs_logo:hover+.nodejs_tooltip{
+        visibility: hidden !important;
+    }
+
 }
 
 
 @media (max-width: 480px){
+    body{
+        background-size: cover !important;
+    }
     .container{
         border-top-right-radius: 0 !important;
         border-top-left-radius: 0 !important;
@@ -188,7 +208,29 @@ body{
     .lower_second_child_div p{
         width: fit-content !important;
     }
+
+    div>.html_logo:hover+.html_tooltip{
+        visibility: hidden !important;
+    }
+    div>.css_logo:hover+.css_tooltip{
+        visibility: hidden !important;
+    }
+    div>.javascript_logo:hover+.javascript_tooltip{
+        visibility: hidden !important;
+    }
+    div>.mongodb_logo:hover+.mongodb_tooltip{
+        visibility: hidden !important;
+    }
+    div>.react_logo:hover+.react_tooltip{
+        visibility: hidden !important;
+    }
+    div>.nodedotjs_logo:hover+.nodejs_tooltip{
+        visibility: hidden !important;
+    }
 }
+
+
+
 @media (min-width: 1440px){
     .lower_first_child_heading{
         width: 100% !important;
