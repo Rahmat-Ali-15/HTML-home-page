@@ -384,7 +384,7 @@ a{
 }
 .profile_image:hover{
     transform: scale(1.2);
-    content: url('3d_eagle.jpg');
+    content: url('https://img.freepik.com/free-photo/3d-eagle-rendering-portrait_23-2150724287.jpg?t=st=1739494878~exp=1739498478~hmac=e8df09f30d1e2472e1494fa210556ccec9dbb5f61347c83e05e30ba951fa8857&w=360');
 }
 
 .image_name{
